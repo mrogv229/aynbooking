@@ -74,15 +74,21 @@ class Ayn_Loader {
 
         $iterator = new RecursiveIteratorIterator( $directory );
 
+        $skipped_files = array(
+            realpath( __FILE__ ),
+            realpath( trailingslashit( $this->base_path ) . 'class-ayn-plugin.php' ),
+        );
+
         /** @var SplFileInfo $file */
         foreach ( $iterator as $file ) {
             if ( $file->isFile() && 'php' === $file->getExtension() ) {
-                // Avoid requiring this loader twice.
-                if ( $file->getPathname() === __FILE__ ) {
+                $path = realpath( $file->getPathname() );
+
+                if ( in_array( $path, $skipped_files, true ) ) {
                     continue;
                 }
 
-                require_once $file->getPathname();
+                require_once $path;
             }
         }
     }
