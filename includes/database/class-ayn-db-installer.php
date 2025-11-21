@@ -7,6 +7,10 @@ if ( ! defined( 'ABSPATH' ) ) {
     exit;
 }
 
+if ( class_exists( 'Ayn_DB_Installer' ) ) {
+    return;
+}
+
 class Ayn_DB_Installer {
     /**
      * Prepare installation hooks.

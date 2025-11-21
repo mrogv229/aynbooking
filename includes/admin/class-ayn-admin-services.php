@@ -7,6 +7,10 @@ if ( ! defined( 'ABSPATH' ) ) {
     exit;
 }
 
+if ( class_exists( 'Ayn_Admin_Services' ) ) {
+    return;
+}
+
 class Ayn_Admin_Services {
     /**
      * Hook into admin menus.

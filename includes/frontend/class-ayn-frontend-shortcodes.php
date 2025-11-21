@@ -7,6 +7,10 @@ if ( ! defined( 'ABSPATH' ) ) {
     exit;
 }
 
+if ( class_exists( 'Ayn_Frontend_Shortcodes' ) ) {
+    return;
+}
+
 class Ayn_Frontend_Shortcodes {
     /**
      * Register plugin shortcodes.

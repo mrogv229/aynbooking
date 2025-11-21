@@ -7,6 +7,10 @@ if ( ! defined( 'ABSPATH' ) ) {
     exit;
 }
 
+if ( class_exists( 'Ayn_Booking_Manager' ) ) {
+    return;
+}
+
 class Ayn_Booking_Manager {
     /**
      * Register booking-related hooks.

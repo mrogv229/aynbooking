@@ -7,6 +7,10 @@ if ( ! defined( 'ABSPATH' ) ) {
     exit;
 }
 
+if ( class_exists( 'Ayn_Email_Templates' ) ) {
+    return;
+}
+
 class Ayn_Email_Templates {
     /**
      * Register email templates with WooCommerce.

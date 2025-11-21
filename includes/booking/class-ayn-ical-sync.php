@@ -7,6 +7,10 @@ if ( ! defined( 'ABSPATH' ) ) {
     exit;
 }
 
+if ( class_exists( 'Ayn_Ical_Sync' ) ) {
+    return;
+}
+
 class Ayn_Ical_Sync {
     /**
      * Schedule and run iCal sync tasks.

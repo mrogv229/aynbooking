@@ -7,6 +7,10 @@ if ( ! defined( 'ABSPATH' ) ) {
     exit;
 }
 
+if ( class_exists( 'Ayn_Owner_Dashboard' ) ) {
+    return;
+}
+
 class Ayn_Owner_Dashboard {
     /**
      * Register endpoints or admin adjustments for owners.

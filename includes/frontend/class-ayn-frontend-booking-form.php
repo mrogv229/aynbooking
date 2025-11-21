@@ -7,6 +7,10 @@ if ( ! defined( 'ABSPATH' ) ) {
     exit;
 }
 
+if ( class_exists( 'Ayn_Frontend_Booking_Form' ) ) {
+    return;
+}
+
 class Ayn_Frontend_Booking_Form {
     /**
      * Register booking form assets and hooks.

@@ -7,6 +7,10 @@ if ( ! defined( 'ABSPATH' ) ) {
     exit;
 }
 
+if ( class_exists( 'Ayn_Product_Display' ) ) {
+    return;
+}
+
 class Ayn_Product_Display {
     /**
      * Register template and display hooks.

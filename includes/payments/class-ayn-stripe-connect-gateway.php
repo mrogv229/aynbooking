@@ -7,6 +7,10 @@ if ( ! defined( 'ABSPATH' ) ) {
     exit;
 }
 
+if ( class_exists( 'Ayn_Stripe_Connect_Gateway' ) ) {
+    return;
+}
+
 class Ayn_Stripe_Connect_Gateway {
     /**
      * Register the gateway with WooCommerce.

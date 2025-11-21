@@ -7,6 +7,10 @@ if ( ! defined( 'ABSPATH' ) ) {
     exit;
 }
 
+if ( class_exists( 'Ayn_Availability' ) ) {
+    return;
+}
+
 class Ayn_Availability {
     /**
      * Register availability-related hooks.

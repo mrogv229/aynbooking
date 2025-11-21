@@ -7,6 +7,10 @@ if ( ! defined( 'ABSPATH' ) ) {
     exit;
 }
 
+if ( class_exists( 'Ayn_Commission_Engine' ) ) {
+    return;
+}
+
 class Ayn_Commission_Engine {
     /**
      * Prepare hooks to run commission calculations.

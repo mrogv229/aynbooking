@@ -7,6 +7,10 @@ if ( ! defined( 'ABSPATH' ) ) {
     exit;
 }
 
+if ( class_exists( 'Ayn_Owner_CPT' ) ) {
+    return;
+}
+
 class Ayn_Owner_CPT {
     /**
      * Register the owner custom post type when needed.

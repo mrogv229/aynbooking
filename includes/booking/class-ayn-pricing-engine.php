@@ -7,6 +7,10 @@ if ( ! defined( 'ABSPATH' ) ) {
     exit;
 }
 
+if ( class_exists( 'Ayn_Pricing_Engine' ) ) {
+    return;
+}
+
 class Ayn_Pricing_Engine {
     /**
      * Prepare hooks used by the pricing engine (e.g., AJAX endpoints).

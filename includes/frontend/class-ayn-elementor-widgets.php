@@ -7,6 +7,10 @@ if ( ! defined( 'ABSPATH' ) ) {
     exit;
 }
 
+if ( class_exists( 'Ayn_Elementor_Widgets' ) ) {
+    return;
+}
+
 class Ayn_Elementor_Widgets {
     /**
      * Register Elementor widgets and controls.

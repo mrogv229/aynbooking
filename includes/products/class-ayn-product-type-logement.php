@@ -7,6 +7,10 @@ if ( ! defined( 'ABSPATH' ) ) {
     exit;
 }
 
+if ( class_exists( 'Ayn_Product_Type_Logement' ) ) {
+    return;
+}
+
 class Ayn_Product_Type_Logement {
     /**
      * Register product type hooks.

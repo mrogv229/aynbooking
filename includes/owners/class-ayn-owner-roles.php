@@ -7,6 +7,10 @@ if ( ! defined( 'ABSPATH' ) ) {
     exit;
 }
 
+if ( class_exists( 'Ayn_Owner_Roles' ) ) {
+    return;
+}
+
 class Ayn_Owner_Roles {
     /**
      * Register custom roles and capabilities.

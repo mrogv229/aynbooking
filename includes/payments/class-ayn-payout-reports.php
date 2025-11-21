@@ -7,6 +7,10 @@ if ( ! defined( 'ABSPATH' ) ) {
     exit;
 }
 
+if ( class_exists( 'Ayn_Payout_Reports' ) ) {
+    return;
+}
+
 class Ayn_Payout_Reports {
     /**
      * Register payout reporting hooks.

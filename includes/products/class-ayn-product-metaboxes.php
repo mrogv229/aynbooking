@@ -7,6 +7,10 @@ if ( ! defined( 'ABSPATH' ) ) {
     exit;
 }
 
+if ( class_exists( 'Ayn_Product_Metaboxes' ) ) {
+    return;
+}
+
 class Ayn_Product_Metaboxes {
     /**
      * Register lodging metaboxes.
