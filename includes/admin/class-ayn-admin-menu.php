@@ -7,6 +7,10 @@ if ( ! defined( 'ABSPATH' ) ) {
     exit;
 }
 
+if ( class_exists( 'Ayn_Admin_Menu' ) ) {
+    return;
+}
+
 class Ayn_Admin_Menu {
     /**
      * Main menu slug.

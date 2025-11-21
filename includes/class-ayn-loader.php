@@ -7,6 +7,10 @@ if ( ! defined( 'ABSPATH' ) ) {
     exit;
 }
 
+if ( class_exists( 'Ayn_Loader' ) ) {
+    return;
+}
+
 class Ayn_Loader {
     /**
      * Path to the includes directory.

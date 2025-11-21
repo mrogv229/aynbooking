@@ -7,6 +7,10 @@ if ( ! defined( 'ABSPATH' ) ) {
     exit;
 }
 
+if ( class_exists( 'Ayn_Booking_Plugin' ) ) {
+    return;
+}
+
 class Ayn_Booking_Plugin {
     /**
      * Singleton instance.
